@@ -31,7 +31,7 @@ if (strpos('@php_bin@', '@php_bin') === 0) {
 }
 
 // Disable strict errors for the compiler
-error_reporting(error_reporting() & ~E_STRICT);
+error_reporting(error_reporting() & ~(E_STRICT | E_WARNING));
 
 require_once 'DrSlump/Protobuf.php';
 
